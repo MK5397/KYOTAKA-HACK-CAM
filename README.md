@@ -1,4 +1,18 @@
-
+version: '3'
+services:
+  xp-bugbot:
+    image: ghcr.io/xp-bot/xp-bugbot:latest
+    volumes:
+      - ./volumes/xp-bugbot/setup.json:/app/setup.json
+    environment:
+      - TOKEN=<discord bot token>
+      - GUILD=<discord guild ID>
+      - SUPPORT_ROLE=<discord support role ID>
+      - ARCHIVE_CATEGORY=<discord archive category ID>
+      - TICKET_CATEGORY=<discord ticket category ID>
+      - GET_HELP_FORUM_CHANNEL=<discord get help forum channel ID>
+      - API_ACCESS=<your API access token>
+      - ALIAS_<user ID>=<alias for user with ID <user ID>>
 <p align="center">
   <img src="https://files.catbox.moe/tmreeo.jpg" width="400"/>
 </p>
